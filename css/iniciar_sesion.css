@@ -1,0 +1,66 @@
+/* Inicio Sesion */
+.img_mecanico_inic {
+    height: 420px;
+    width: 48%;
+    top: 20%;
+    left: 10%;
+    position: absolute;
+}
+
+.img_mecanico_inic img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contenedor_iniciar_sesion {
+    width: 320px;
+    height: 420px;
+    background: #197AD4;
+    color: white;
+    top: 20%;
+    left: 60%;
+    position: absolute;
+    padding: 70px 30px;
+}
+
+.contenedor_iniciar_sesion img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.contenedor_iniciar_sesion h2 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.contenedor_iniciar_sesion label {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor_iniciar_sesion input {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contenedor_iniciar_sesion input[type="text"], input[type="password"] {
+    border: none;
+    border-bottom: 1px #0D2E4F;
+    background: whitesmoke;
+    outline: none;
+    height: 30px;
+}
+
+/* Fin Iniciar Sesion *7

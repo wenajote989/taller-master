@@ -1,16 +1,19 @@
-/*HEAD*/
+/* Cambios Globales */
 *{
     margin:0;
     padding: 0;
 }
-
 
 body {
     background-color: rgba(245, 245, 245, 0.877);
     font-family:Georgia, 'Times New Roman', Times, serif;
     scroll-behavior: smooth;
 }
+/* Fin Cambios Globales
 
+
+
+/* Header */
 header {
     width: 100%;
     height: 80px;
@@ -23,6 +26,25 @@ header > div {
     width: 50%;
 }
 
+.contenedor_logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    width: 50px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: 20px;
+    position: absolute;
+    display: none;
+}
+
+.logo {
+    width: 72px;
+    margin-left: 80px;
+}
+
 .nombre_taller {
     align-items:center;
     justify-content: center;
@@ -33,24 +55,6 @@ header > div {
     font-weight: bold;
     color: whitesmoke;
 }
-
-.contenedor_logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    width: 72px;
-    margin-left: 80px;
-}
-
-.menu {
-    width: 50px;
-    height: 40px;
-    margin-left: 20px;
-    margin-top: 20px;
-    position: absolute;
-    }
 
 nav {
     display: flex;
@@ -70,58 +74,194 @@ nav > ul > li {
 
 }
 
-
-
 nav > ul > li > a {
     font-size: 20px;
     color: whitesmoke;
     text-decoration: none;
 }
-/*CARRUSEL NO SE Q
-*/
+/* Fin Header */
 
-#contenido {
-    
-    margin: 10px auto;
-    min-height: 100vh;
-} 
 
-.carousel .carousel-inner .carousel-item img {
-    height: 500px;
-    width: 80%;
-    background-image: none;
-    object-fit:contain;
+
+/* Footer */
+footer {
+    height: 80px;
+    background-color: #197AD4;
 }
 
-.carousel .carousel-inner .carousel-item .carousel-caption {
-    color: white;
-}
-/*FIN CARRUSEL*/
-
-#contenido {
-    width: 80%;
-    margin: 10px auto;
-    min-height: 100vh;
-} 
-
-.productos {
+footer > .logo {
     display: flex;
-    flex-wrap: wrap;
+    width: auto;
+    height: 100%;
+    justify-content:flex-start;
+    align-items: center;
 }
 
-.productos .producto {
-    width: 100%;
-    padding: 10px
+footer > .logo img {
+    width: 72px;
+    height: 60px;
+    margin-left: 3px;
 }
+/* Fin Footer *7
 
-.productos .izquierda {
-    float: left;
-    margin-right: 15px;
-    height: 120px;
-    object-fit: cover;   
-}
-/* GALERIA JJUUJ*/
 
+
+/* Index */
+    /* Separadores */
+    #contenido {
+        width: 80%;
+        margin: 10px auto;
+        min-height: 100vh;
+    }
+
+    .productos {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .productos .producto {
+        width: 100%;
+        padding: 10px
+    }
+    
+    .productos .izquierda {
+        float: left;
+        margin-right: 15px;
+        height: 120px;
+        object-fit: cover;   
+    }
+
+    .productos .producto .contenedor {           
+        margin: auto;
+        background-color: #197AD4;
+        color: #0D2E4F;
+        padding: 15px;     
+    }
+    /* Fin Separadores */
+
+    /* Carrusel */
+    .carousel .carousel-inner .carousel-item img {
+        height: auto;
+        width: 80%;
+        background-image: none;
+    }
+    
+    .carousel .carousel-inner .carousel-item .carousel-caption {
+        color: white;
+    }
+    /* Fin Carrusel */
+
+    /* Submenus */
+    .submenus {
+        height: auto;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sub-submenu {
+        height: auto;
+        width: 49.5%;
+        padding: 1%;
+        padding-bottom: .5%;
+        background-color: #197AD4;
+        display: inline-block;
+    }
+
+    .sub-submenu-mec {
+        background-color: #333;
+        height: 130px;
+        width: 100%;
+        margin-bottom: 1%;
+        padding: 1%;
+        overflow: hidden;
+        padding-right: .5%;
+    }
+
+    .mec-img {
+        height: 100%;
+        width: 19%;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .mec-img img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .sub-texto {
+        height: 100%;
+        width: 59%;
+        background-color: white;
+        display: inline-block;
+        padding: 1%;
+        padding-top: 0;
+        overflow: hidden;
+        margin-right: .5%;
+    }
+
+    .boton {
+        height: 100%;
+        width: 19%;
+        background-color: #197AD4;
+        display: inline-block;
+        overflow: hidden;
+        
+    }
+
+    .boton a {
+        text-align: center;
+        color: white;
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        padding-top: 25%;
+        font-size: 20px;
+    }
+
+    .boton a:hover {
+        color: #333;
+        background-color: white;
+    }
+
+    .sub-submenu-categ {
+        background-color: #333;
+        height: 130px;
+        width: 100%;
+        margin-bottom: 1%;
+        padding: 1%;
+        overflow: hidden;
+    }
+
+    .categ {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .categ a {
+        text-align: center;
+        color: white;
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        font-size: 35px;
+        padding-top: 6%;
+    }
+
+    .categ a:hover {
+        background-color: white;
+        color: #333;
+    }
+    /* Fin Submenus */
+/* Fin Index */
+
+
+
+/* Galeria */
 .galeria_atenciones{
     width: 90%;
     margin: 20px auto;
@@ -185,246 +325,136 @@ nav > ul > li > a {
     width: 220px;
     object-fit: cover; 
 }
-/*Fin Galeria */
-
-/* AUTOS DE LA GALERIA*/
-.mazda_auto{
-    width: 100%;
-    margin: 20px auto;
-    background-color: #197AD4;
-    color: whitesmoke;
-    padding: 15px;
-}
-.mazda_auto .mazdatexto {
-    float: left;
-    margin-right: 15px;
-    height: 70%;
-    width: 60%;
-    object-fit: cover;   
-}
-.chevrolet_auto {
-    width: 100%;
-    margin: 20px auto;
-    background-color: #197AD4;
-    color: whitesmoke;
-    padding: 15px;
-}
-.chevrolet_auto .chevrolettexto {
-    float: left;
-    margin-right: 15px;
-    height: 70%;
-    width: 60%;
-    object-fit: cover; 
-}
-.ford_auto{
-    width: 100%;
-    margin: 20px auto;
-    background-color: #197AD4;
-    color: whitesmoke;
-    padding: 15px;
-}
-
-.ford_auto .fordtexto {
-    float: left;
-    margin-right: 15px;
-    height: 70%;
-    width: 60%;
-    object-fit: cover; 
-}
-.raptor_auto {
-    width: 100%;
-    margin: 20px auto;
-    background-color: #197AD4;
-    color: whitesmoke;
-    padding: 15px;
-}
-.raptor_auto .raptortexto {
-    float: left;
-    margin-right: 15px;
-    height: 70%;
-    width: 60%;
-    object-fit: cover; 
-}
-
-/*FIN AUTOS DE LA FALERIA*/
-.productos .producto .contenedor {           
-        margin: auto;
+    /* Autos de la Galeria*/
+    .mazda_auto{
+        width: 100%;
+        margin: 20px auto;
         background-color: #197AD4;
-        color: #0D2E4F;
-        padding: 15px;     
+        color: whitesmoke;
+        padding: 15px;
+    }
+    .mazda_auto .mazdatexto {
+        float: left;
+        margin-right: 15px;
+        height: 70%;
+        width: 60%;
+        object-fit: cover;   
+    }
+    .chevrolet_auto {
+        width: 100%;
+        margin: 20px auto;
+        background-color: #197AD4;
+        color: whitesmoke;
+        padding: 15px;
+    }
+    .chevrolet_auto .chevrolettexto {
+        float: left;
+        margin-right: 15px;
+        height: 70%;
+        width: 60%;
+        object-fit: cover; 
+    }
+    .ford_auto{
+        width: 100%;
+        margin: 20px auto;
+        background-color: #197AD4;
+        color: whitesmoke;
+        padding: 15px;
+    }
+
+    .ford_auto .fordtexto {
+        float: left;
+        margin-right: 15px;
+        height: 70%;
+        width: 60%;
+        object-fit: cover; 
+    }
+    .raptor_auto {
+        width: 100%;
+        margin: 20px auto;
+        background-color: #197AD4;
+        color: whitesmoke;
+        padding: 15px;
+    }
+    .raptor_auto .raptortexto {
+        float: left;
+        margin-right: 15px;
+        height: 70%;
+        width: 60%;
+        object-fit: cover; 
+    }   
+    /*Fin autos de la Galeria*/
+/* Fin Galeria */
+
+
+
+/* Registrar */
+.img_mecanico_reg {
+    height: 60%;
+    width: 48%;
+    top: 20%;
+    left: 34%;
+    position: absolute;
 }
 
-footer {
-    height: 80px;
-    background-color: #197AD4;
-}
-
-footer > .logo {
-    display: flex;
-    width: auto;
+.img_mecanico_reg img {
     height: 100%;
-    justify-content:flex-start;
-    align-items: center;
-}
-
-footer > .logo img {
-    width: 72px;
-    height: 60px;
-    margin-left: 3px;
-}
-
-/* Submenus */
-.submenus {
     width: 100%;
-    height: 300px;
-    padding: .5%;
-    margin-top: 10px;
-    background-color: #197AD4;
-}
-
-.submenu_mecanicos {
-    width: 49.5%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: #333;
-    float: left;
-}
-
-.plantilla1_mecanico {
-    width: 100%;
-    height: 33.3%;
-    background-color: #197AD4;
-    padding: 1%;
-}
-
-.plantilla1_mecanico img {
-    width: 20%;
-    height: 100%;
     object-fit: cover;
-    float: left;
 }
 
-.texto1_mec {
-    display: inline-block;
-    margin-left: 1%;
-    width: 58%;
-    height: 100%;
-    padding: 1%;
-    background-color: whitesmoke;
-}
-
-.boton1_mec {
-    width: 20%;
-    height: 100%;
-    float: right;
-    background-color: rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-    text-align: center;
-}
-
-.boton1_mec a {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    font-weight: bold;
-    text-align: center;
+.contenedor_registrar {
+    width: 22%;
+    height: 60%;
+    background: #197AD4;
     color: white;
-    font-size: 16px;
+    top: 20%;
+    left: 10%;
+    position: absolute;
+    padding: 70px 30px;
+}
+
+.contenedor_registrar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 20px;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+.contenedor_registrar h2 {
     margin: 0;
-    padding-top: 25%;
-}
-
-.boton1_mec a:hover {
-    background-color: white;
-    color: #333;
-}
-
-.plantilla2_mecanico {
-    width: 100%;
-    height: 33.3%;
-    background-color: #197AD4;
-    padding: 1%;
-}
-
-.plantilla2_mecanico img {
-    width: 20%;
-    height: 100%;
-    object-fit: cover;
-    float: right;
-}
-
-.texto2_mec {
-    display: inline-block;
-    margin-left: 1%;
-    width: 58%;
-    height: 100%;
-    padding: 1%;
-    background-color: whitesmoke;
-}
-
-.boton2_mec {
-    width: 20%;
-    height: 100%;
-    float: left;
-    background-color: rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-    text-align: center;
-}
-
-.boton2_mec a {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    font-size: 16px;
-    margin: 0;
-    padding-top: 25%;
-}
-
-.boton2_mec a:hover {
-    background-color: white;
-    color: #333;
-}
-
-.submenu_categorias {
-    width: 49.5%;
-    height: 100%;
     padding: 0;
-    margin: 0;
-    background-color: #333;
-    float: right;
-}
-
-.categoria {
-    width: 100%;
-    height: 33.3%;
-    background-color: #197AD4;
-    padding: 1%;
+    padding-bottom: 20px;
     text-align: center;
-}
-
-.categoria a {
-    display: inline-block;
     font-size: 30px;
-    height: 100%;
+}
+
+.contenedor_registrar label {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor_registrar input {
     width: 100%;
-    padding-top: 5%;
-    background-color: #333;
-    color: white;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.categoria a:hover {
-    background-color: white;
-    color: #333;
+.contenedor_registrar input[type="text"], input[type="password"] {
+    border: none;
+    border-bottom: 1px #0D2E4F;
+    background: whitesmoke;
+    outline: none;
+    height: 30px;
 }
+/* Fin Regristrar */
 
-.menu {
-    display: none;
-}
-/* Fin Sumbenus */
+
 
 /* Inicio Sesion */
 .img_mecanico_inic {
@@ -491,73 +521,9 @@ footer > .logo img {
     outline: none;
     height: 30px;
 }
-/* Fin Iniciar Sesion *7
+/* Fin Inicio Sesion *7
 
-/* Registrarse */
-.img_mecanico_reg {
-    height: 60%;
-    width: 48%;
-    top: 20%;
-    left: 34%;
-    position: absolute;
-}
 
-.img_mecanico_reg img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.contenedor_registrar {
-    width: 22%;
-    height: 60%;
-    background: #197AD4;
-    color: white;
-    top: 20%;
-    left: 10%;
-    position: absolute;
-    padding: 70px 30px;
-}
-
-.contenedor_registrar img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-top: 20px;
-    position: absolute;
-    top: -50px;
-    left: calc(50% - 50px);
-}
-
-.contenedor_registrar h2 {
-    margin: 0;
-    padding: 0;
-    padding-bottom: 20px;
-    text-align: center;
-    font-size: 30px;
-}
-
-.contenedor_registrar label {
-    display: block;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.contenedor_registrar input {
-    width: 100%;
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.contenedor_registrar input[type="text"], input[type="password"] {
-    border: none;
-    border-bottom: 1px #0D2E4F;
-    background: whitesmoke;
-    outline: none;
-    height: 30px;
-}
-/* Fin Regristrarse */
 
 /* Inicio Buscador */
 .titulo_buscador {
@@ -613,7 +579,9 @@ footer > .logo img {
 }
 /* Fin Buscador */
 
-/* Inicio Categorias */
+
+
+/* Categorias */
 .titulo_categ {
     width: 100%;
     height: 10%;
@@ -653,7 +621,9 @@ footer > .logo img {
 }
 /* Fin Categorias */
 
-/* Inicio Mecanicos */
+
+
+/* Mecanicos */
 .titulo_mec {
     width: 100%;
     height: 10%;
@@ -694,6 +664,7 @@ footer > .logo img {
 /* Fin Mecanicos */
 
 
+
 /*MEDIA QUERIES*/
 
 @media (max-width: 1024px) {
@@ -731,24 +702,8 @@ footer > .logo img {
         width: 0%;
     }
 
-    .submenu_mecanicos {
+    .sub-submenu {
         width: 100%;
-        height: 50%;
-    }
-
-    .submenu_categorias {
-        width: 100%;
-        height: 50%;
-    }
-
-    .submenus {
-        height: 600px;
-    }
-    .carousel .carousel-inner .carousel-item img {
-        height: 350px;
-        width: 80%;
-        background-image: none;
-        object-fit:contain;
     }
 }
 
@@ -821,11 +776,9 @@ footer > .logo img {
     .img_mecanico_reg {
         width: 0%;
     }
-    .carousel .carousel-inner .carousel-item img {
-        height: 250px;
-        width: 80%;
-        background-image: none;
-        object-fit:contain;
+
+    .sub-texto {
+        width: 58%;
     }
 }
 

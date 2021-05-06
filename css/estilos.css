@@ -87,9 +87,10 @@ nav > ul > li > a {
 } 
 
 .carousel .carousel-inner .carousel-item img {
-    height: auto;
+    height: 500px;
     width: 80%;
     background-image: none;
+    object-fit:contain;
 }
 
 .carousel .carousel-inner .carousel-item .carousel-caption {
@@ -663,6 +664,12 @@ footer > .logo img {
     .submenus {
         height: 600px;
     }
+    .carousel .carousel-inner .carousel-item img {
+        height: 350px;
+        width: 80%;
+        background-image: none;
+        object-fit:contain;
+    }
 }
 
 @media (max-width: 480px) {
@@ -733,6 +740,12 @@ footer > .logo img {
 
     .img_mecanico_reg {
         width: 0%;
+    }
+    .carousel .carousel-inner .carousel-item img {
+        height: 250px;
+        width: 80%;
+        background-image: none;
+        object-fit:contain;
     }
 }
 

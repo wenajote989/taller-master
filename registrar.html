@@ -45,14 +45,19 @@
             <div class="contenedor_registrar">
                 <img src="img/avatar.jpg" alt="avatar">
                 <h2>Registrarse</h2>
-                <form>
-                    <label for="usuario"><b>Nombre de Usuario</b></label>
-                    <input type="text" name="usuario" placeholder="Ingrese nombre de usuario" required>
-                    <label for="mail"><b>Mail</b></label>
-                    <input type="email" name="main" placeholder="Ingrese su mail" required>
-                    <label for="contrasenia"><b>Contrasenia</b></label>
-                    <input type="password" name="contrasenia" placeholder="Ingrese su contrasenia" required>
-                    <input type="submit" name="" value="Iniciar Sesion">
+                <form id="form_registro">
+                    <label for="usuario2"><b>Nombre de Usuario</b></label>
+                    <input type="text" name="usuario2" placeholder="Ingrese usuario" id="usuario2">
+                    <br>
+                    <label for="email"><b>Mail</b></label>
+                    <input type="email" name="email" placeholder="Ingrese  mail" id="email">
+                    <br>
+                    <label for="password"><b>Contrasenia</b></label>            
+                    <input type="password" name="password" placeholder="Ingrese contrasenia" id="password" >
+                    <br>
+                    <button type="button" id="guardar2">Registrarte</button>
+                    <br>
+                    <input type="reset" value="Limpiar">
                 </form>
             </div>
         </div>
@@ -67,7 +72,13 @@
     </footer>
     <!-- Fin Footer -->
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="js/traducciones.js"></script>
+
     <script src="js/menu.js"></script>
+    <script src="js/formulario_jquery.js"></script>
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

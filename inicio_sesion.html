@@ -26,10 +26,10 @@
         <div>
             <nav id="nav">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="galeria.html">Galeria</a></li>
                     <li><a href="registrar.html">Registro</a></li>
-                    <li><a href="inicio_sesion.html">Inicio Sesion</a></li>
+                    <li><a href="#">Inicio Sesion</a></li>
                     <li><a href="buscador.html">Buscar</a></li>
                 </ul>
             </nav>
@@ -46,12 +46,16 @@
             <div class="contenedor_iniciar_sesion">
                 <img src="img/avatar.jpg" alt="avatar">
                 <h2>Iniciar Sesion</h2>
-                <form>
+                <form id="form_inicio"> 
                     <label for="usuario"><b>Nombre de Usuario</b></label>
-                    <input type="text" name="usuario" placeholder="Ingrese nombre de usuario" required>
+                    <input type="text" name="usuario" placeholder="Ingrese usuario" id="usuario">
+                    <br>
                     <label for="contrasenia"><b>Contrasenia</b></label>
-                    <input type="password" name="contrasenia" placeholder="Ingrese su contrasenia" required>
-                    <input type="submit" name="" value="Iniciar Sesion">
+                    <input type="password" name="contrasenia" placeholder="Ingrese contraseña" id="contra">
+                    <br>
+                    <button type="button" id="GUARDAR">Iniciar Sesion</button>
+                    <br>
+                    <input type="reset" value="Limpiar">
                 </form>
             </div>
         </div>
@@ -67,8 +71,15 @@
     </footer>
     <!-- Fin Footer -->
 
-    <script src="js/menu.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="js/traducciones.js"></script>
 
+    <script src="js/menu.js"></script>
+    <script src="js/formulario_jquery.js"></script>
+    
+    
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>

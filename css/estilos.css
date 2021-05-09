@@ -151,6 +151,33 @@ footer > .logo img {
     }
     /* Fin Carrusel */
 
+    /* Solicitar */
+    .solicitar {
+        height: 100px;
+        width: 100%;
+        margin-top: 10px;
+        padding: 1%;
+        background-color: #197AD4;
+        overflow: hidden;
+    }
+
+    .solicitar a {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        font-size: 25px;
+        padding-top: 2%;
+    }
+
+    .solicitar a:hover {
+        background-color: white;
+        color: #333;
+    }
+    /* Fin Solciitar */
+
     /* Submenus */
     .submenus {
         height: auto;
@@ -388,12 +415,12 @@ footer > .logo img {
 
 
 
-/* Registrar
+/* Registrar */
 .img_mecanico_reg {
-    height: 60%;
+    height: auto;
     width: 48%;
     top: 20%;
-    left: 34%;
+    left: 42%;
     position: absolute;
 }
 
@@ -404,8 +431,8 @@ footer > .logo img {
 }
 
 .contenedor_registrar {
-    width: 22%;
-    height: 60%;
+    width: 30%;
+    height: auto;
     background: #197AD4;
     color: white;
     top: 20%;
@@ -441,22 +468,30 @@ footer > .logo img {
 
 .contenedor_registrar input {
     width: 100%;
+    margin-bottom: 3%;
+    text-align: center;
+}
+
+.contenedor_registrar button {
+    width: 100%;
     margin-bottom: 10px;
     text-align: center;
 }
 
-.contenedor_registrar input[type="text"], input[type="password"] {
+.contenedor_registrar input[type="text"], input[type="password"], button[type="button"] {
     border: none;
     border-bottom: 1px #0D2E4F;
     background: whitesmoke;
     outline: none;
     height: 30px;
 }
+/* Fin Registrar */
 
-AQUI COMIENZA INICIAR
 
+
+/* Inicio Sesion */
 .img_mecanico_inic {
-    height: 420px;
+    height: auto;
     width: 80%;
     top: 20%;
     left: 10%;
@@ -470,8 +505,8 @@ AQUI COMIENZA INICIAR
 }
 
 .contenedor_iniciar_sesion {
-    width: 22%;
-    height: 60%;
+    width: 30%;
+    height: auto;
     background: #197AD4;
     color: white;
     top: 20%;
@@ -512,17 +547,21 @@ AQUI COMIENZA INICIAR
     text-align: center;
 }
 
-.contenedor_iniciar_sesion input[type="text"], input[type="password"] {
+.contenedor_iniciar_sesion button {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contenedor_iniciar_sesion input[type="text"], input[type="password"], button[type="button"] {
     border: none;
     border-bottom: 1px #0D2E4F;
     background: whitesmoke;
     outline: none;
     height: 30px;
 }
+/* HEAD
 Fin Inicio Sesion */
-
-
-
 
 /* Inicio Buscador */
 .titulo_buscador {
@@ -664,6 +703,48 @@ Fin Inicio Sesion */
 
 
 
+/* Solicitud */
+.solicitud {
+    background-color: #197AD4;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    padding: 1%;
+}
+
+.solicitud h2 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 3%;
+}
+
+#form_solicitud label {
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+#form_solicitud input {
+    width: 65%;
+    margin-bottom: 2%;
+    margin-left: 17%;
+}
+
+#form_solicitud input:last-child {
+    margin-left: 35%;
+    width: 30%;
+}
+
+#form_solicitud button {
+    text-align: center;
+    width: 30%;
+    margin-left: 35%;
+    margin-bottom: 3%;
+}
+/* Fin Solicitud */
+
+
 /*MEDIA QUERIES*/
 
 @media (max-width: 1024px) {
@@ -759,7 +840,8 @@ Fin Inicio Sesion */
     .contenedor_iniciar_sesion {
         width: 100%;
         left: 0%;
-        top: 50%;
+        margin-top: 20%;
+        position: relative;
     }
     
     .img_mecanico_inic {
@@ -768,8 +850,9 @@ Fin Inicio Sesion */
 
     .contenedor_registrar {
         width: 100%;
-        left: 0%;
-        top: 50%;
+        left: 0;
+        margin-top: 20%;
+        position: relative;
     }
 
     .img_mecanico_reg {
@@ -778,6 +861,10 @@ Fin Inicio Sesion */
 
     .sub-texto {
         width: 58%;
+    }
+
+    .solicitar a {
+        padding-top: 10%;
     }
 }
 

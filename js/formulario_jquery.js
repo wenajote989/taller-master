@@ -1,3 +1,13 @@
+/* terminaPor */
+$.validator.addMethod("terminaPor", function(value, element, parametro){
+    if(value.endsWith(parametro)){
+        return true;
+    }
+    return false;
+}, "Debe terminar por {0}")
+/* Fin de terminaPor */
+
+/* Formulacioo inciar sesion y registrar */
 $("#form_inicio").validate({
     rules: {
         usuario: {
@@ -20,14 +30,6 @@ $("#GUARDAR").click(function() {
     let contra = $("#contra").val()
 
 })
-
-
-$.validator.addMethod("terminaPor", function(value, element, parametro){
-    if(value.endsWith(parametro)){
-        return true;
-    }
-    return false;
-}, "Debe terminar por {0}")
 
 $("#form_registro").validate({
     rules: {
@@ -58,3 +60,50 @@ $("#guardar2").click(function() {
     let password = $("#password").val()
     
 })
+/* Fin de iniciar sesion y registrar */
+
+/* Formulario de solicitud */
+$("#form_solicitud").validate({
+    rules: {
+        nombre: {
+            required: true,
+            minlength: 3,
+            maxlength: 10
+        },
+        apellido: {
+            required: true,
+            minlength: 3,
+            maxlength: 10
+        },
+        modelo: {
+            required: true,
+            minlength: 3,
+            maxlength: 15
+        },
+        patente: {
+            required: true,
+            minlength: 6,
+            maxlength: 7
+        },
+        email: {
+            required: true,
+            email: true,
+            terminaPor: ".com"
+        },
+    }
+})
+
+
+
+$("#guardar3").click(function() {
+    if($("#form_solicitud").valid() == false) {
+        return;
+    }
+    let nombre = $("#nombre").val()
+    let apellido = $("#apellido").val()
+    let modelo = $("#modelo").val()
+    let patente = $("#patente").val()
+    let email = $("#email").val()
+    
+})
+/* Fin formulario de solicitud */

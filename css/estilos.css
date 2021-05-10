@@ -85,7 +85,7 @@ nav > ul > li > a {
 
 /* Footer */
 footer {
-    height: 80px;
+    height: auto;
     background-color: #197AD4;
 }
 
@@ -98,9 +98,17 @@ footer > .logo {
 }
 
 footer > .logo img {
-    width: 72px;
-    height: 60px;
-    margin-left: 3px;
+    width: 6%;
+    object-fit: contain;
+}
+
+footer > .logo p:nth-child(2) {
+    font-size: 25px;
+    margin-right: 35%;
+}
+
+footer > .logo p:last-child {
+    font-size: 25px;
 }
 /* Fin Footer *7
 
@@ -808,6 +816,11 @@ Fin Inicio Sesion */
     .solicitud {
         width: 100%;
     }
+
+    footer > .logo img {
+        width: 10%;
+        object-fit: contain;
+    }
 }
 
 @media (max-width: 480px) {
@@ -884,6 +897,11 @@ Fin Inicio Sesion */
 
     .sub-texto {
         width: 58%;
+    }
+
+    footer > .logo img {
+        width: 25%;
+        object-fit: contain;
     }
 
     .solicitar a {

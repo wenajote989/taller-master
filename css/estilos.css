@@ -563,6 +563,8 @@ footer > .logo img {
 /* HEAD
 Fin Inicio Sesion */
 
+
+
 /* Inicio Buscador */
 .titulo_buscador {
     text-align: center;
@@ -783,6 +785,10 @@ Fin Inicio Sesion */
     }
 
     .sub-submenu {
+        width: 100%;
+    }
+
+    .solicitud {
         width: 100%;
     }
 }

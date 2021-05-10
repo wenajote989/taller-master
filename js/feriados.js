@@ -6,7 +6,9 @@ $.get(url, function(respuesta){
         console.log(item)
     });*/
     let feriado = respuesta[respuesta.length -15]
+    
 
     $("#feriado").text(feriado.nombre + " - "
     + feriado.fecha)
+    
 })

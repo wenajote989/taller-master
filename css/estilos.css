@@ -141,9 +141,10 @@ footer > .logo img {
 
     /* Carrusel */
     .carousel .carousel-inner .carousel-item img {
-        height: auto;
+        height: 600px;
         width: 80%;
         background-image: none;
+        
     }
     
     .carousel .carousel-inner .carousel-item .carousel-caption {
@@ -785,6 +786,20 @@ Fin Inicio Sesion */
     .sub-submenu {
         width: 100%;
     }
+        /* Carrusel */
+        .carousel .carousel-inner .carousel-item img {
+            height:  auto;
+            max-height: 350px;
+            min-height: 350px;
+            width: 80%;
+            background-image: none;
+            
+        }
+        
+        .carousel .carousel-inner .carousel-item .carousel-caption {
+            color: white;
+        }
+        /* Fin Carrusel */
 }
 
 @media (max-width: 480px) {
@@ -866,5 +881,19 @@ Fin Inicio Sesion */
     .solicitar a {
         padding-top: 10%;
     }
+            /* Carrusel */
+            .carousel .carousel-inner .carousel-item img {
+                height:  auto;
+                
+                min-height: 220px;
+                width: 80%;
+                background-image: none;
+                
+            }
+            
+            .carousel .carousel-inner .carousel-item .carousel-caption {
+                color: white;
+            }
+            /* Fin Carrusel */
 }
 

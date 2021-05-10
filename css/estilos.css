@@ -564,6 +564,8 @@ footer > .logo img {
 /* HEAD
 Fin Inicio Sesion */
 
+
+
 /* Inicio Buscador */
 .titulo_buscador {
     text-align: center;
@@ -786,8 +788,9 @@ Fin Inicio Sesion */
     .sub-submenu {
         width: 100%;
     }
+
         /* Carrusel */
-        .carousel .carousel-inner .carousel-item img {
+    .carousel .carousel-inner .carousel-item img {
             height:  auto;
             max-height: 350px;
             min-height: 350px;
@@ -796,10 +799,15 @@ Fin Inicio Sesion */
             
         }
         
-        .carousel .carousel-inner .carousel-item .carousel-caption {
+    .carousel .carousel-inner .carousel-item .carousel-caption {
             color: white;
         }
         /* Fin Carrusel */
+
+
+    .solicitud {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {

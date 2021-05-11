@@ -22,7 +22,7 @@ $("#form_inicio").validate({
 })
 
 
-$("#GUARDAR").click(function() {
+$("#guardar").click(function() {
     if($("#form_inicio").valid() == false) {
         return;
     }

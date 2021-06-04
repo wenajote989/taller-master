@@ -9,7 +9,7 @@
         <div id="contenido">
             <div class="galeria_atenciones">
                 <img class = "izquierda2" src="{% static 'core/img/MazdaGT.jpg' %}"  alt="autorojo">
-                <aside><a href="mazda.html"> <font color="whitesmoke">Mazda 3 2.5 GT SPORT
+                <aside><a href="{% url 'mazda' %}"> <font color="whitesmoke">Mazda 3 2.5 GT SPORT
                 </font>
                 </a>            
                 </aside>
@@ -23,7 +23,7 @@
             </div>
             <div class="galeria_atenciones2">
                 <img class = "derecha" src="{% static 'core/img/ChevroletAzul.jfif' %}" alt="autoazul">
-                <aside><a href="chevrolet.html"><font color="whitesmoke">Chevrolet Captiva
+                <aside><a href="{% url 'chevrolet' %}"><font color="whitesmoke">Chevrolet Captiva
                 </font>
                 </a>
                     </aside>
@@ -37,7 +37,7 @@
             </div>      
             <div class="galeria_atenciones3">
                 <img class = "izquierda3" src="{% static 'core/img/Ford-Mustang-verde-Need-for-Green.jpg' %}"  alt="autoverde">
-                <aside><a href="ford.html"><font color="whitesmoke">Ford Mustang
+                <aside><a href="{% url 'ford' %}"><font color="whitesmoke">Ford Mustang
                 </font>
                 </a></aside>
                 <aside><h4>Lorem ipsum, dolor sit amet
@@ -50,7 +50,7 @@
             </div>  
             <div class="galeria_atenciones4">
                 <img class = "derecha2" src="{% static 'core/img/FordRaptor.jpg' %}" alt="autoamarillo">
-                <aside><a href="raptor.html"><font color="whitesmoke">Ford RANGER Raptor
+                <aside><a href="{% url 'raptor' %}"><font color="whitesmoke">Ford RANGER Raptor
                 </font>
                 </a><h3></aside>
                 <aside><h4>Lorem ipsum, dolor sit amet

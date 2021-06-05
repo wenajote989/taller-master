@@ -726,6 +726,31 @@ Fin Inicio Sesion */
     height: 100%;
     object-fit: contain;
 }
+
+.boton_volver {
+    width: 20%;
+    height: 5%;
+    padding: 0%;
+    margin: 0%;
+    overflow: hidden;
+	background-color: #197AD4;
+	margin-top: .5%;
+}
+
+.boton_volver a {
+    text-align: center;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.boton_volver a:hover {
+    color: white;
+    background-color: #333;
+}
+
 /* Fin Mecanicos */
 
 

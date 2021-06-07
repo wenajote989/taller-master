@@ -4,12 +4,15 @@ from django.db import models
 
 # Mecanico
 
-#class Mecanico(models.Model):
-#    nombre_mec = models.CharField(max_length=50)
-#    apellido_sol = models.CharField(max_length=20)
-#    descr_mec = models.TextField
-#    img_mec = models.ImageField
+class Mecanico(models.Model):
+    idCategoria = models.IntegerField(primary_key=True,verbose_name='Id Categoria')
+    nombre_mec = models.CharField(max_length=50,verbose_name='Nombre mec')
+    apellido_sol = models.CharField(max_length=20,verbose_name='Apellido mec')
+    descr_mec = models.TextField
+    #img_mec = models.ImageField
 
+    def __str__(self):
+        return self.nombre_mec
 # Catergoria
 
 #class Categoria(models.Model):

@@ -9,7 +9,7 @@ class Mecanico(models.Model):
     nombre_mec = models.CharField(max_length=50,verbose_name='Nombre mec')
     apellido_sol = models.CharField(max_length=20,verbose_name='Apellido mec')
     descr_mec = models.TextField
-    #img_mec = models.ImageField
+    img_mec = models.ImageField(upload_to="productos", null=True)
 
     def __str__(self):
         return self.nombre_mec

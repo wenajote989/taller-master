@@ -1,11 +1,16 @@
 from django import http
 from django.http.response import HttpResponse
 from django.shortcuts import render
+from .models import Mecanico
 
 # Create your views here.
 
 def index(request):
-    return render(request, 'core/index.html')
+    mecanico = Mecanico.objects.all()
+    data = {
+        'mecanico': mecanico
+    }
+    return render(request, 'core/index.html', data)
 def galeria(request):
     return render(request, 'core/galeria.html')
 def buscador(request):

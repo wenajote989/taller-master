@@ -5,7 +5,7 @@ from .models import Mecanico
 
 class MecanicoAdmin(admin.ModelAdmin):
     list_display = ("nombre_mec", "apellido_sol")
-    
+    list_per_page = 2
 
 
 

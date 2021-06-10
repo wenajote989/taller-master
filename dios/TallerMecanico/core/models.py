@@ -8,7 +8,7 @@ class Mecanico(models.Model):
     idCategoria = models.IntegerField(primary_key=True,verbose_name='Id Categoria')
     nombre_mec = models.CharField(max_length=50,verbose_name='Nombre mec')
     apellido_sol = models.CharField(max_length=20,verbose_name='Apellido mec')
-    descr_mec = models.TextField
+    descr_mec = models.TextField(max_length=255,blank=True, verbose_name='desc mec')
     img_mec = models.ImageField(upload_to="productos", null=True)
 
     def __str__(self):

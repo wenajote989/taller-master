@@ -3,4 +3,10 @@ from .models import Mecanico
 
 # Register your models here.
 
-admin.site.register(Mecanico)
+class MecanicoAdmin(admin.ModelAdmin):
+    list_display = ("nombre_mec", "apellido_sol")
+    
+
+
+
+admin.site.register(Mecanico, MecanicoAdmin)

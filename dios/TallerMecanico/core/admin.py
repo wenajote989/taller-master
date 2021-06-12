@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Mecanico
+from .models import Mecanico, Categoria
 
 # Register your models here.
 
@@ -9,4 +9,6 @@ class MecanicoAdmin(admin.ModelAdmin):
 
 
 
+
 admin.site.register(Mecanico, MecanicoAdmin)
+admin.site.register(Categoria)

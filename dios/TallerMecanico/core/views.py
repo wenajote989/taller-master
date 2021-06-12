@@ -1,7 +1,7 @@
 from django import http
 from django.http.response import HttpResponse
 from django.shortcuts import render
-from .models import Mecanico
+from .models import Mecanico, Categoria
 
 # Create your views here.
 
@@ -11,12 +11,16 @@ def index(request):
         'mecanico': mecanico
     }
     return render(request, 'core/index.html', data)
+
 def galeria(request):
     return render(request, 'core/galeria.html')
+    
 def buscador(request):
     return render(request, 'core/buscador.html')
+
 def categoria1(request):
     return render(request, 'core/categoria1.html')
+
 def chevrolet(request):
     return render(request, 'core/chevrolet.html')
 def ford(request):
@@ -25,8 +29,14 @@ def inicio_sesion(request):
     return render(request, 'core/inicio_sesion.html')
 def mazda(request):
     return render(request, 'core/mazda.html')
-def mecanico1(request):
-    return render(request, 'core/mecanico1.html')
+
+def mecanico(request,idMecanico):
+    mecanico = Mecanico.objects.filter(primary_key=idMecanico)
+    data = {
+        'mecanico': mecanico
+    }
+    return render(request, 'core/mecanico.html', data)
+
 def raptor(request):
     return render(request, 'core/raptor.html')
 def registrar(request):

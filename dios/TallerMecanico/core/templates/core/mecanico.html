@@ -6,24 +6,16 @@
 
     {% block content %}
     <main>
-        <div id="contenido">
-            <div class="productos">
-                <div class="producto">
-                    <div class="contenedor">    
-                        <img class = "izquierda" src="{% static 'core/img/mecanico1.jpg' %}" alt="mecanico">
-                        <aside><h4>Lorem ipsum, dolor sit amet
-                            consectetur adipisicing elit.
-                            Autem, reprehenderit harum aperiam
-                            quos commodi officiis dolores repellat
-                            possimus dicta, nisi iusto
-                            qui atque magnam eveniet aut?
-                            Cupiditate ad sapiente illum!</h4></aside><aside><h4>Lorem ipsum, dolor sit amet
-                            consectetur adipisicing elit.
-                            Autem, reprehenderit harum aperiam
-                            quos commodi officiis dolores repellat
-                            possimus dicta, nisi iusto
-                            qui atque magnam eveniet aut?
-                            Cupiditate ad sapiente illum!</h4></aside>
+        {% for m in mecanico %}
+        <div id="contenido1">
+            <div class="productos1">
+                <div class="producto1">
+                    <div class="contenedor1">
+                        {% if m.img_mec %}
+                        <img class = "izquierda" src="{{ m.img_mec.url }}" alt="mecanico">
+                        {% endif %}
+                        <aside><h4>{{ m.nombre_mec }} {{ m.apellido_sol }}</h4></aside><aside><h4>{{ m.descr_mec }}</h4></aside>
+                        
                     </div>
                 </div>
             </div>
@@ -48,6 +40,7 @@
                 <a href="{% url 'index' %}">Volver</a>
             </div>
         <div>
+        {% endfor %}
     </main>
     {% endblock %}
    

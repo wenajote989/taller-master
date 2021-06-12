@@ -144,6 +144,7 @@ footer > .logo p:last-child {
         background-color: #197AD4;
         color: #0D2E4F;
         padding: 15px;     
+        width: auto;
     }
     /* Fin Separadores */
 
@@ -689,6 +690,48 @@ Fin Inicio Sesion */
 
 
 /* Mecanicos */
+#contenido1 {
+    width: 80%;
+    margin: 10px auto;
+    min-height: 100vh;
+}
+
+.productos1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productos1 .producto1 {
+    width: 100%;
+    padding: 10px
+}
+
+.productos1 .izquierda1 {
+    float: left;
+    margin-right: 15px;
+    height: 120px;
+    object-fit: cover;   
+}
+
+.productos1 .producto1 .contenedor1 {           
+    margin: auto;
+    background-color: #197AD4;
+    color: #0D2E4F;
+    padding: 15px;     
+    width: 100%;
+}
+
+.productos1 .producto1 .contenedor1 .izquierda {           
+    margin: auto;
+    background-color: #197AD4;
+    color: #0D2E4F;
+    padding: 15px;     
+    width: 100%;
+}
+
+
+
+
 .titulo_mec {
     width: 100%;
     height: 10%;

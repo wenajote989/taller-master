@@ -805,6 +805,16 @@ Fin Inicio Sesion */
     height: auto;
     margin: auto;
     padding: 1%;
+    
+}
+
+.solicitud {
+    background-color: #197AD4;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    padding: 1%;
+    
 }
 
 .solicitud h2 {
@@ -814,32 +824,39 @@ Fin Inicio Sesion */
     margin-bottom: 3%;
 }
 
-#form_solicitud label {
+.form_solicitud label {
     color: white;
     width: 100%;
     text-align: center;
 }
 
-#form_solicitud input {
+.form_solicitud input {
     width: 65%;
     margin-bottom: 2%;
     margin-left: 17%;
     text-align: center;
 }
 
-#form_solicitud input:last-child {
+.form_solicitud input:last-child {
     margin-left: 35%;
     width: 30%;
 }
 
-#form_solicitud button {
+.form_solicitud button {
     text-align: center;
     width: 30%;
     margin-left: 35%;
     margin-bottom: 3%;
 }
-.solicitud input[type="text"], .solicitud input[type="email"], .solicitud button[type="button"]
-, .solicitud input[type="reset"] {
+.form_solicitud textarea {
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 3%;
+}
+
+.solicitud input[type="text"], .solicitud input[type="email"], .solicitud button[type="submit"], .solicitud textarea[type="textarea"]
+, .solicitud input[type="reset"]{
     border: 3px solid #013584;
     background: whitesmoke;
     outline: none;

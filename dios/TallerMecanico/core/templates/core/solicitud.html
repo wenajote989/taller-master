@@ -9,26 +9,16 @@
         <div id="contenido">
             <div class="solicitud">
                 <h2>Solicitud</h2>
-                <form id="form_solicitud">
-                    <label for="nombre"><b>Nombre</b></label>
-                    <input type="text" name="nombre" placeholder="Ingrese su nombre" id="nombre" required>
+                <form action="" class="form_solicitud" method="post">
+                   {% csrf_token %}
+
+                    {{ form }}
                     <br>
-                    <label for="apellido"><b>Apellido</b></label>
-                    <input type="text" name="apellido" placeholder="Ingrese su apellido" id="apellido">
-                    <br>
-                    <label for="modelo"><b>Modelo</b></label>            
-                    <input type="text" name="modelo" placeholder="Ingrese el modelo de su auto" id="modelo" >
-                    <br>
-                    <label for="patente"><b>Patente</b></label>            
-                    <input type="text" name="patente" placeholder="Ingrese la patente de su auto" id="patente" >
-                    <br>
-                    <label for="email"><b>Mail</b></label>
-                    <input type="email" name="email" placeholder="Ingrese su email" id="email">
-                    <br>                    
-                    <button type="button" id="guardar3">Enviar Formulario</button>
+                    <button type="submit" id="guardar3">Enviar Formulario</button>
                     <br>
                     <input type="reset" value="Limpiar">
                 </form>
+                {{mensaje}}
             </div>
         </div>
     </main>

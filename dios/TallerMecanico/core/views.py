@@ -2,6 +2,7 @@ from django import http
 from django.http.response import HttpResponse
 from django.shortcuts import render
 from .models import Mecanico, Categoria
+from .forms import ContactoForm
 
 # Create your views here.
 
@@ -42,4 +43,17 @@ def raptor(request):
 def registrar(request):
     return render(request, 'core/registrar.html')
 def solicitud(request):
-    return render(request, 'core/solicitud.html')
+    data = {
+        'form': ContactoForm()
+    }
+
+    if request.method == 'POST':
+        formulario = ContactoForm(data=request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            data["mensaje"] = "solicitud enviada"
+
+        else:
+            data["form"] = formulario
+
+    return render(request, 'core/solicitud.html', data)

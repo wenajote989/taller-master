@@ -23,6 +23,22 @@ class Categoria(models.Model):
 
     def __str__(self):
         return self.nombre_cat
+
+
+#Contacto
+
+class Contacto(models.Model):
+    nombre_cont = models.CharField(max_length=25,verbose_name='Nombre')
+    apellido_cont = models.CharField(max_length=45,verbose_name='Apellidos')
+    modelo_cont = models.CharField(max_length=35,verbose_name='Modelo vehiculo')
+    patente_cont = models.CharField(max_length=6,verbose_name='Patente')
+    email_cont = models.EmailField()
+    mensaje_cont = models.TextField()
+
+    def __str__(self):
+        return self.nombre_cont
+
+
 # Auto
 
 #class Auto(models.Model):

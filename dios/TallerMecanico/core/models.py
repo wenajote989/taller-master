@@ -41,13 +41,14 @@ class Contacto(models.Model):
 
 # Auto
 
-#class Auto(models.Model):
-#    nombre_auto = models.CharField(max_length=20)
-#    modelo_auto = models.CharField(max_length=15)
-#    patente_auto = models.CharField(max_length=10)
-#    probl_auto = models.TextField
-#    rep_auto = models.TextField
-#    img_auto = models.ImageField
+class Auto(models.Model):
+    modelo_auto = models.CharField(max_length=25,verbose_name='Modelo del Auto')
+    patente_auto = models.CharField(max_length=7,verbose_name='Patente')
+    img_auto = models.ImageField(upload_to="productos", null=True)
+    descripcion = models.TextField(max_length=455,blank=True)
+
+    def __str__(self):
+        return self.modelo_auto
 
 # Solicitud
 

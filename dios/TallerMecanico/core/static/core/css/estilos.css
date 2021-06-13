@@ -300,61 +300,19 @@ footer > .logo p:last-child {
 
 
 /* Galeria */
-.galeria_atenciones{
-    width: 90%;
-    margin: 20px auto;
-    background-color: #197AD4;
-    color: whitesmoke;
-    padding: 15px;
-    font-size:larger;
-}
-.galeria_atenciones2{
-    width: 90%;
-    margin: 20px auto;
-    background-color: #197AD4;
-    color: whitesmoke;
-    padding: 15px;
-    font-size:larger;
-}
-.galeria_atenciones3{
-    width: 90%;
-    margin: 20px auto;
-    background-color: #197AD4;
-    color: whitesmoke;
-    padding: 15px;
-    font-size:larger;
-}
+
 .galeria_atenciones4{
-    width: 90%;
-    margin: 20px auto;
+    width: 100%;
+    margin: 20px ;
     background-color: #197AD4;
     color: whitesmoke;
     padding: 15px;
     font-size:larger;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
 }
 
-.galeria_atenciones .izquierda2 {
-    float: left;
-    margin-right: 15px;
-    height: 150px;
-    width: 220px;
-    object-fit: cover;
-}
-
-.galeria_atenciones2 .derecha {
-    float: right;
-    margin-left: 15px;
-    height: 150px;
-    width: 220px;
-    object-fit: cover; 
-}
-.galeria_atenciones3 .izquierda3 {
-    float: left;
-    margin-right: 15px;
-    height: 150px;
-    width: 220px;
-    object-fit: cover;
-}
 
 .galeria_atenciones4 .derecha2 {
     float: right;
@@ -363,6 +321,9 @@ footer > .logo p:last-child {
     width: 220px;
     object-fit: cover; 
 }
+
+
+
     /* Autos de la Galeria*/
     .mazda_auto{
         width: 100%;

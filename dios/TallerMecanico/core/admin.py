@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Mecanico, Categoria, Contacto
+from .models import Mecanico, Categoria, Contacto, Auto
 
 # Register your models here.
 
@@ -13,3 +13,4 @@ class MecanicoAdmin(admin.ModelAdmin):
 admin.site.register(Mecanico, MecanicoAdmin)
 admin.site.register(Categoria)
 admin.site.register(Contacto)
+admin.site.register(Auto)

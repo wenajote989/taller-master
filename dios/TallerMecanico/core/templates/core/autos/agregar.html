@@ -1,0 +1,27 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block titulo %}
+<title>Taller Rayo Mcqueen</title>
+{% endblock %}
+
+    {% block content %}
+    <main>
+        <div id="contenido">
+            <div class="solicitud">
+                <h2>Solicitud</h2>
+                <form action="" class="form_solicitud" method="post" enctype="multipart/form-data">
+                    
+                    {% csrf_token %}
+
+                    {{ form }}
+                    <br>
+                    <button type="submit" id="guardar4">Enviar Formulario</button>
+                    <br>
+                    <input type="reset" value="Limpiar">
+                </form>
+                {{mensaje}}
+            </div>
+        </div>
+    </main>
+    {% endblock %}
+    

@@ -7,60 +7,20 @@
     {% block content %}
     <main>
         <div id="contenido">
-            <div class="galeria_atenciones">
-                <img class = "izquierda2" src="{% static 'core/img/MazdaGT.jpg' %}"  alt="autorojo">
-                <aside><a href="{% url 'mazda' %}"> <font color="whitesmoke">Mazda 3 2.5 GT SPORT
-                </font>
-                </a>            
-                </aside>
-                <aside><h4>Lorem ipsum, dolor sit amet
-                    consectetur adipisicing elit.
-                    Autem, reprehenderit harum aperiam
-                    quos commodi officiis dolores repellat
-                    possimus dicta, nisi iusto
-                    qui atque magnam eveniet aut?
-                    Cupiditate ad sapiente illum!</h4></aside>
-            </div>
-            <div class="galeria_atenciones2">
-                <img class = "derecha" src="{% static 'core/img/ChevroletAzul.jfif' %}" alt="autoazul">
-                <aside><a href="{% url 'chevrolet' %}"><font color="whitesmoke">Chevrolet Captiva
-                </font>
-                </a>
-                    </aside>
-                <aside><h4>Lorem ipsum, dolor sit amet
-                    consectetur adipisicing elit.
-                    Autem, reprehenderit harum aperiam
-                    quos commodi officiis dolores repellat
-                    possimus dicta, nisi iusto
-                    qui atque magnam eveniet aut?
-                    Cupiditate ad sapiente illum!</h4></aside>
-            </div>      
-            <div class="galeria_atenciones3">
-                <img class = "izquierda3" src="{% static 'core/img/Ford-Mustang-verde-Need-for-Green.jpg' %}"  alt="autoverde">
-                <aside><a href="{% url 'ford' %}"><font color="whitesmoke">Ford Mustang
-                </font>
-                </a></aside>
-                <aside><h4>Lorem ipsum, dolor sit amet
-                    consectetur adipisicing elit.
-                    Autem, reprehenderit harum aperiam
-                    quos commodi officiis dolores repellat
-                    possimus dicta, nisi iusto
-                    qui atque magnam eveniet aut?
-                    Cupiditate ad sapiente illum!</h4></aside>
-            </div>  
+            {% for a in auto %}
             <div class="galeria_atenciones4">
-                <img class = "derecha2" src="{% static 'core/img/FordRaptor.jpg' %}" alt="autoamarillo">
-                <aside><a href="{% url 'raptor' %}"><font color="whitesmoke">Ford RANGER Raptor
-                </font>
-                </a><h3></aside>
-                <aside><h4>Lorem ipsum, dolor sit amet
-                    consectetur adipisicing elit.
-                    Autem, reprehenderit harum aperiam
-                    quos commodi officiis dolores repellat
-                    possimus dicta, nisi iusto
-                    qui atque magnam eveniet aut?
-                    Cupiditate ad sapiente illum!</h4></aside>
+                    {% if a.img_auto %}
+                    <img class = "derecha2" src="{{ a.img_auto.url }}" alt="autoamarillo">
+                    {% endif %}
+                        <aside><h4>{{ a.modelo_auto }}</h4></aside>
+                        <aside><h4>{{ a.patente_auto }}</h4></aside>
+
+                    <aside><h4>{{ a.descripcion }}</h4></aside>
+                
+                <br>
             </div>
+            {% endfor %}
+            
         </div>
     </main>
     {% endblock %}

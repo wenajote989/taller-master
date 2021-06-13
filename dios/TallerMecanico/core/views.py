@@ -1,8 +1,8 @@
 from django import http
 from django.http.response import HttpResponse
 from django.shortcuts import render
-from .models import Mecanico, Categoria
-from .forms import ContactoForm
+from .models import Mecanico, Categoria, Auto
+from .forms import ContactoForm, AutoForm
 
 # Create your views here.
 
@@ -14,7 +14,11 @@ def index(request):
     return render(request, 'core/index.html', data)
 
 def galeria(request):
-    return render(request, 'core/galeria.html')
+    auto = Auto.objects.all()
+    data = {
+        'auto': auto
+    }
+    return render(request, 'core/galeria.html', data)
     
 def buscador(request):
     return render(request, 'core/buscador.html')
@@ -58,4 +62,19 @@ def solicitud(request):
 
     return render(request, 'core/solicitud.html', data)
 def modificar(request):
-    return render(request, 'core/modificar.html')
+    return render(request, 'core/autos/modificar.html')
+def agregar(request):
+
+    data = {
+        'form': AutoForm()
+    }
+    if request.method == 'POST':
+        formulario = AutoForm(data=request.POST, files=request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            data["mensaje"] = "Auto Guardado"
+        else:
+            data["form"] = formulario
+    return render(request, 'core/autos/agregar.html', data)
+def listar(request):
+    return render(request, 'core/autos/listar.html')

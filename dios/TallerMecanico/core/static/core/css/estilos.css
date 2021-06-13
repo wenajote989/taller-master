@@ -163,7 +163,7 @@ footer > .logo p:last-child {
 
     /* Solicitar */
     .solicitar {
-        height: 100px;
+        height: auto;
         width: 100%;
         margin-top: 10px;
         padding: 1%;
@@ -180,6 +180,7 @@ footer > .logo p:last-child {
         display: inline-block;
         font-size: 25px;
         padding-top: 2%;
+        margin: 5px;
     }
 
     .solicitar a:hover {

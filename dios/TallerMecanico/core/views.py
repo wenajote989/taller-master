@@ -57,3 +57,5 @@ def solicitud(request):
             data["form"] = formulario
 
     return render(request, 'core/solicitud.html', data)
+def modificar(request):
+    return render(request, 'core/modificar.html')

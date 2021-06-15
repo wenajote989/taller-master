@@ -166,7 +166,9 @@ footer > .logo p:last-child {
         height: auto;
         width: 100%;
         margin-top: 10px;
-        padding: 1%;
+        padding: .5%;
+        padding-right: 1.5%;
+        margin-right: 10px;
         background-color: #197AD4;
         overflow: hidden;
     }
@@ -179,7 +181,8 @@ footer > .logo p:last-child {
         height: 100%;
         display: inline-block;
         font-size: 25px;
-        padding-top: 2%;
+        padding-top: 1%;
+        padding-bottom: 1%;
         margin: 5px;
     }
 

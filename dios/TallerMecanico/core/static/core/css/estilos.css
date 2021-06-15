@@ -400,6 +400,7 @@ footer > .logo p:last-child {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    display: flex;
 }
 
 .contenedor_registrar {
@@ -999,8 +1000,11 @@ Fin Inicio Sesion */
         position: relative;
     }
     
-    .img_mecanico_inic {
-        width: 0%;
+    .mecanico_inic{
+        display: none;
+    }
+    .img {
+        display: none;
     }
 
     .contenedor_registrar {
@@ -1013,6 +1017,8 @@ Fin Inicio Sesion */
     .img_mecanico_reg {
         width: 0%;
     }
+
+
 
     .sub-texto {
         width: 58%;

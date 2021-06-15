@@ -8,14 +8,14 @@
     <main>
         <div id="contenido">
             <div class="solicitud">
-                <h2>Solicitud</h2>
+                <h2>Agregar Auto</h2>
                 <form action="" class="form_solicitud" method="post" enctype="multipart/form-data">
                     
                     {% csrf_token %}
 
                     {{ form }}
                     <br>
-                    <button type="submit" id="guardar4">Enviar Formulario</button>
+                    <button type="submit" id="guardar4">Agregar</button>
                     <br>
                     <input type="reset" value="Limpiar">
                 </form>

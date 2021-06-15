@@ -1,7 +1,7 @@
 from django import http
 from django.http.response import HttpResponse
-from django.shortcuts import render
-from .models import Mecanico, Categoria, Auto
+from django.shortcuts import render, redirect, get_object_or_404
+from .models import Mecanico, Auto
 from .forms import ContactoForm, AutoForm
 
 # Create your views here.
@@ -35,12 +35,8 @@ def inicio_sesion(request):
 def mazda(request):
     return render(request, 'core/mazda.html')
 
-def mecanico(request,idMecanico):
-    mecanico = Mecanico.objects.filter(primary_key=idMecanico)
-    data = {
-        'mecanico': mecanico
-    }
-    return render(request, 'core/mecanico.html', data)
+def mecanico(request):
+    return render(request, 'core/mecanico.html')
 
 def raptor(request):
     return render(request, 'core/raptor.html')
@@ -61,9 +57,8 @@ def solicitud(request):
             data["form"] = formulario
 
     return render(request, 'core/solicitud.html', data)
-def modificar(request):
-    return render(request, 'core/autos/modificar.html')
-def agregar(request):
+
+def agregar_autos(request):
 
     data = {
         'form': AutoForm()
@@ -76,5 +71,15 @@ def agregar(request):
         else:
             data["form"] = formulario
     return render(request, 'core/autos/agregar.html', data)
-def listar(request):
+def listar_autos(request):
     return render(request, 'core/autos/listar.html')
+
+def modificar_autos(request, id):
+
+    auto = get_object_or_404(Auto, id=id)
+
+    data = {
+        'form': AutoForm(instance=auto)
+    }
+
+    return render(request, 'core/autos/modificar.html', data)

@@ -13,8 +13,6 @@ class Mecanico(models.Model):
     def __str__(self):
         return self.nombre_mec
     
-    def get_url(self):
-        return reverse('mecanico',args=[self.id])
 #Catergoria
 
 class Categoria(models.Model):

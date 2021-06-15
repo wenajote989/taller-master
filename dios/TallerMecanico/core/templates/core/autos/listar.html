@@ -13,13 +13,18 @@
                         <tr colspan>
                            <th>Modelo</th>
                            <th>Patente</th>
+                           <th>Opciones</th>                       
                        </tr>
         
                        {% for a in auto %}
         
                       <tr>
-                          <td>{{ a.modelo_auto }}</td>
+                            <td>{{ a.modelo_auto }}</td>
                            <td>{{ a.patente_auto }}</td>
+                           <td>
+                            <a href={% url 'modificar_autos' a.id %} class="btn btn-info btn-sm">Modificar</a>
+                            <a href={% url 'eliminar_auto' a.id %} class="btn btn-danger btn-sm">Eliminar</a>
+                           </td>
                        </tr>
         
                        {% endfor %}

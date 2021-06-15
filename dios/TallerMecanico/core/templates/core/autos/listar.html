@@ -1,0 +1,34 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block titulo %}
+<title>Taller Rayo Mcqueen</title>
+{% endblock %}
+
+    {% block content %}
+
+        <main>
+            <div class="card">
+                <div class="card body">
+                    <table class="table table-striped table-hover table-responsive-sm">
+                        <tr colspan>
+                           <th>Modelo</th>
+                           <th>Patente</th>
+                       </tr>
+        
+                       {% for a in auto %}
+        
+                      <tr>
+                          <td>{{ a.modelo_auto }}</td>
+                           <td>{{ a.patente_auto }}</td>
+                       </tr>
+        
+                       {% endfor %}
+        
+                     </table>
+                </div>
+            </div>
+            
+        </main>
+
+    {% endblock %}
+    

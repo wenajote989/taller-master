@@ -72,11 +72,17 @@ def agregar_autos(request):
             data["form"] = formulario
     return render(request, 'core/autos/agregar.html', data)
 def listar_autos(request):
-    return render(request, 'core/autos/listar.html')
+    auto = Auto.objects.all()
+
+    data = {
+        'auto': auto
+    }
+    return render(request, 'core/autos/listar.html', data)
 
 def modificar_autos(request, id):
 
     auto = get_object_or_404(Auto, id=id)
+    
 
     data = {
         'form': AutoForm(instance=auto)

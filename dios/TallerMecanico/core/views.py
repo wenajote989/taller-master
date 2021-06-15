@@ -71,6 +71,7 @@ def agregar_autos(request):
         else:
             data["form"] = formulario
     return render(request, 'core/autos/agregar.html', data)
+
 def listar_autos(request):
     auto = Auto.objects.all()
 
@@ -83,9 +84,20 @@ def modificar_autos(request, id):
 
     auto = get_object_or_404(Auto, id=id)
     
-
     data = {
         'form': AutoForm(instance=auto)
     }
 
-    return render(request, 'core/autos/modificar.html', data)
+    if request.method == 'POST':
+        formulario = AutoForm(data=request.POST, instance=auto, files=request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect(to="galeria")
+        else:
+            data["form"] = formulario
+    return render(request, 'core/autos/agregar.html', data)
+
+def eliminar_auto(request, id):
+    auto = get_object_or_404(Auto, id=id)
+    auto.delete()
+    return redirect(to="listar_autos")

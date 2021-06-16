@@ -6,34 +6,23 @@
 
     {% block content %}
     <main>
+        {% for c in categoria %}
         <div id="contenido">
             <div class="titulo_categ">
-                <h2>Categoria 1</h2>
+                <h2>{{ c.nombre_cat }}</h2>
             </div>
             <div class="contenedor_imagenes_categ">
-                <div class="contenedor_img_c">  
-                    <a href="{% url 'ford' %}"><img src="{% static 'core/img/Ford-Mustang-verde-Need-for-Green.jpg' %}"></a>
-                </div>
-                <div class="contenedor_img_c">  
-                    <a href="{% url 'chevrolet' %}"><img src="{% static 'core/img/ChevroletAzul.jfif' %}"></a>
-                </div>
-                <div class="contenedor_img_c">  
-                    <a href="{% url 'raptor' %}"><img src="{% static 'core/img/FordRaptor.jpg' %}"></a>
-                </div>
-                <div class="contenedor_img_c">  
-                    <a href="#"><img src="{% static 'core/img/autoamarillo.webp' %}"></a>
-                </div>
-                <div class="contenedor_img_c">  
-                    <a href="{% url 'mazda' %}"><img src="{% static 'core/img/MazdaGT.jpg' %}"></a>
-                </div>
-                <div class="contenedor_img_c">  
-                    <a href="#"><img src="{% static 'core/img/autoazul.jpg' %}"></a>
+                <div class="contenedor_img_c">
+                    {% for a in auto%}
+                        <a href="{% url 'auto' a.id %}"><img class = "derecha2" src="{{ a.img_auto.url }}" alt="autoamarillo"></a>
+                    {% endfor %}
                 </div>
             </div>
             <div class="boton_volver">
                 <a href="{% url 'index' %}">Volver</a>
             </div>
         </div>
+        {% endfor %}
     </main>
     {% endblock %}
     

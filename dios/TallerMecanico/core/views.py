@@ -1,15 +1,17 @@
 from django import http
 from django.http.response import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Mecanico, Auto
+from .models import Mecanico, Auto, Categoria
 from .forms import ContactoForm, AutoForm
 
 # Create your views here.
 
 def index(request):
     mecanico = Mecanico.objects.all()
+    categoria = Categoria.objects.all()
     data = {
-        'mecanico': mecanico
+        'mecanico': mecanico,
+        'categoria': categoria
     }
     return render(request, 'core/index.html', data)
 
@@ -23,8 +25,14 @@ def galeria(request):
 def buscador(request):
     return render(request, 'core/buscador.html')
 
-def categoria1(request):
-    return render(request, 'core/categoria1.html')
+def categoria1(request, id):
+    categoria = Categoria.objects.filter(id=id)
+    auto = Auto.objects.all()
+    data = {
+        'categoria': categoria,
+        'auto': auto
+    }
+    return render(request, 'core/categoria1.html', data)
 
 def chevrolet(request):
     return render(request, 'core/chevrolet.html')
@@ -35,13 +43,27 @@ def inicio_sesion(request):
 def mazda(request):
     return render(request, 'core/mazda.html')
 
-def mecanico(request):
-    return render(request, 'core/mecanico.html')
+def mecanico(request, id):
+    mecanico = Mecanico.objects.filter(id=id)
+    auto = Auto.objects.all()
+    data = {
+        'mecanico': mecanico,
+        'auto': auto
+    }
+    return render(request, 'core/mecanico.html', data)
+
+def auto(request, id):
+    auto = Auto.objects.filter(id=id)
+    data = {
+        'auto': auto
+    }
+    return render(request, 'core/autos/auto.html', data)
 
 def raptor(request):
     return render(request, 'core/raptor.html')
 def registrar(request):
     return render(request, 'core/registrar.html')
+
 def solicitud(request):
     data = {
         'form': ContactoForm()

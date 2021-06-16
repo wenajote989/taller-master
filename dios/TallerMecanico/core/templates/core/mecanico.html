@@ -12,7 +12,7 @@
                 <div class="producto1">
                     <div class="contenedor1">
                         {% if m.img_mec %}
-                        <img class = "izquierda" src="{{ m.img_mec.url }}" alt="mecanico">
+                            <img class = "izquierda" src="{{ m.img_mec.url }}" alt="mecanico">
                         {% endif %}
                         <aside><h4>{{ m.nombre_mec }} {{ m.apellido_sol }}</h4></aside><aside><h4>{{ m.descr_mec }}</h4></aside>
                         
@@ -24,16 +24,9 @@
             </div>
             <div class="contenedor_imagenes_mec">   
                 <div class="contenedor_img_m">
-                    <a href="{% url 'chevrolet' %}"><img src="{% static 'core/img/ChevroletAzul.jfif' %}"></a>
-                </div>
-                <div class="contenedor_img_m">  
-                    <a href="{% url 'ford' %}"><img src="{% static 'core/img/Ford-Mustang-verde-Need-for-Green.jpg' %}"></a>
-                </div>
-                <div class="contenedor_img_m">  
-                    <a href="{% url 'raptor' %}"><img src="{% static 'core/img/FordRaptor.jpg' %}"></a>
-                </div>
-                <div class="contenedor_img_m">  
-                    <a href="{% url 'mazda' %}"><img src="{% static 'core/img/MazdaGT.jpg' %}"></a>
+                    {% for a in auto%}
+                        <a href="{% url 'auto' a.id %}"><img class = "derecha2" src="{{ a.img_auto.url }}" alt="autoamarillo"></a>
+                    {% endfor %}
                 </div>
             </div>
             <div class="boton_volver">

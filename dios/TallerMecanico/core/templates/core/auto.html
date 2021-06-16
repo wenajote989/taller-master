@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block titulo %}
+<title>Taller Rayo Mcqueen</title>
+{% endblock %}
+
+    {% block content %}
+    <main>
+        <div id="contenido">
+            {% for a in auto %}
+
+            <div class="chevrolet_auto">    
+                {% if a.img_auto %}
+                    <img class = "chevrolettexto" src="{{ a.img_auto.url }}" alt="autoamarillo">
+                {% endif %}
+                <aside>
+                    <h3>{{ a.modelo_auto }}</h3>
+                </aside>
+                <aside>
+                    <h4>{{ a.descripcion }}</h4>
+                </aside>
+            </div>
+            <div class="boton_volver">
+                <a href="{% url 'index' %}">Volver</a>
+            </div>
+
+            {% endfor %}
+        </div>
+    </main>
+    {% endblock %}

@@ -12,11 +12,11 @@
                 <h2>{{ c.nombre_cat }}</h2>
             </div>
             <div class="contenedor_imagenes_categ">
+                {% for a in auto%}
                 <div class="contenedor_img_c">
-                    {% for a in auto%}
                         <a href="{% url 'auto' a.id %}"><img class = "derecha2" src="{{ a.img_auto.url }}" alt="autoamarillo"></a>
-                    {% endfor %}
                 </div>
+                {% endfor %}
             </div>
             <div class="boton_volver">
                 <a href="{% url 'index' %}">Volver</a>
@@ -24,5 +24,4 @@
         </div>
         {% endfor %}
     </main>
-    {% endblock %}
-    
+    {% endblock %}    

@@ -22,12 +22,12 @@
             <div class="titulo_mec">
                 <h2>Trabajos realizados</h2>
             </div>
-            <div class="contenedor_imagenes_mec">   
+            <div class="contenedor_imagenes_mec">
+                {% for a in auto%}   
                 <div class="contenedor_img_m">
-                    {% for a in auto%}
                         <a href="{% url 'auto' a.id %}"><img class = "derecha2" src="{{ a.img_auto.url }}" alt="autoamarillo"></a>
-                    {% endfor %}
                 </div>
+                {% endfor %}
             </div>
             <div class="boton_volver">
                 <a href="{% url 'index' %}">Volver</a>

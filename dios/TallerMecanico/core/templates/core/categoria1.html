@@ -12,10 +12,12 @@
                 <h2>{{ c.nombre_cat }}</h2>
             </div>
             <div class="contenedor_imagenes_categ">
-                {% for a in auto%}
-                <div class="contenedor_img_c">
+                {% for a in auto %}
+                    {% if a.categoria.id == c.id %}
+                    <div class="contenedor_img_m">
                         <a href="{% url 'auto' a.id %}"><img class = "derecha2" src="{{ a.img_auto.url }}" alt="autoamarillo"></a>
-                </div>
+                    </div>
+                    {% endif %}
                 {% endfor %}
             </div>
             <div class="boton_volver">

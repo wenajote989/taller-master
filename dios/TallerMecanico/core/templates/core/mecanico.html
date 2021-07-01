@@ -12,10 +12,11 @@
                 <div class="producto1">
                     <div class="contenedor1">
                         {% if m.img_mec %}
-                            <img class = "izquierda" src="{{ m.img_mec.url }}" alt="mecanico">
+                            <img class = "img_mecanico" src="{{ m.img_mec.url }}" alt="mecanico">
                         {% endif %}
-                        <aside><h4>{{ m.nombre_mec }} {{ m.apellido_sol }}</h4></aside><aside><h4>{{ m.descr_mec }}</h4></aside>
-                        
+                        <div class="texto_mec">
+                            <aside><h3>{{ m.nombre_mec }} {{ m.apellido_sol }}</h3></aside><aside><p>{{ m.descr_mec }}</p></aside>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -23,10 +24,12 @@
                 <h2>Trabajos realizados</h2>
             </div>
             <div class="contenedor_imagenes_mec">
-                {% for a in auto%}   
-                <div class="contenedor_img_m">
+                {% for a in auto %}
+                    {% if a.mecanico.id == m.id %}
+                    <div class="contenedor_img_m">
                         <a href="{% url 'auto' a.id %}"><img class = "derecha2" src="{{ a.img_auto.url }}" alt="autoamarillo"></a>
-                </div>
+                    </div>
+                    {% endif %}
                 {% endfor %}
             </div>
             <div class="boton_volver">

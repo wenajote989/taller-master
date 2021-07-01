@@ -43,11 +43,14 @@ class Auto(models.Model):
     patente_auto = models.CharField(max_length=7,verbose_name='Patente')
     img_auto = models.ImageField(upload_to="productos", null=True)
     descripcion = models.TextField(max_length=455,blank=True)
+    mecanico = models.ForeignKey(Mecanico, on_delete=models.CASCADE, default=None)
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, default=None)
 
     def __str__(self):
         return self.modelo_auto
 
 # Solicitud
+
 
 #class Solicitud(models.Model):
 #    nombre_sol = models.CharField(max_length=20)

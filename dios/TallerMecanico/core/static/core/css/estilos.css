@@ -142,7 +142,7 @@ footer > .logo p:last-child {
     .productos .producto .contenedor {           
         margin: auto;
         background-color: #197AD4;
-        color: #0D2E4F;
+        color: whitesmoke;
         padding: 15px;     
         width: auto;
     }
@@ -349,11 +349,16 @@ footer > .logo p:last-child {
         color: whitesmoke;
         padding: 15px;
     }
+
+    .chevrolet_auto .texto{
+        display: inline-block;
+        width: 47%;
+    }
+
     .chevrolet_auto .chevrolettexto {
-        float: left;
+        display: inline-block;
         margin-right: 15px;
-        height: 70%;
-        width: 60%;
+        width: 50%;
         object-fit: cover; 
     }
     .ford_auto{
@@ -687,12 +692,18 @@ Fin Inicio Sesion */
     width: 100%;
 }
 
-.productos1 .producto1 .contenedor1 .izquierda {           
-    margin: auto;
-    background-color: #197AD4;
-    color: #0D2E4F;
-    padding: 15px;     
-    width: 100%;
+.texto_mec {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    color: whitesmoke;
+    margin: 4%;
+}
+
+.img_mecanico {
+    display: inline-block;
+    width: 30%;
+    object-fit: cover;
 }
 
 
@@ -814,6 +825,14 @@ Fin Inicio Sesion */
     margin-left: 35%;
     margin-bottom: 3%;
 }
+
+.form_solicitud select {
+    text-align: center;
+    width: 30%;
+    margin-left: 35%;
+    margin-bottom: 3%;
+}
+
 .form_solicitud textarea {
     text-align: center;
     width: 70%;
